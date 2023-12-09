@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Chrome TTS #DevFestSE",
+  "description": "A chrome text-to-speech extension for reading articles",
+  "icons": {
+    "128": "icons/google-dev.png",
+    "16": "icons/google-dev.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["tts", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
